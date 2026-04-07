@@ -1,0 +1,200 @@
+{
+  "breadcrumb": {
+    "home": "Inicio",
+    "signin": "Iniciar sesión",
+    "dashboard": "Panel",
+    "settings": "Configuración",
+    "api-keys": "Claves API",
+    "projects": "Proyectos",
+    "profile": "Perfil",
+    "account": "Cuenta"
+  },
+  "common": {
+    "appName": "Synmet",
+    "tagline": "Métricas y productividad",
+    "footerDescription": "Synmet es una plataforma de código abierto, gestionada como SaaS y autohospedada para rastrear actividades de desarrollo.",
+    "appDescription": "Rastreo de actividad de desarrollo con privacidad primero",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "signUp": "Registrarse",
+    "dashboard": "Espacio de Trabajo",
+    "documentation": "Documentación",
+    "getStarted": "Comenzar",
+    "learnMore": "Saber más",
+    "settings": "Gestión",
+    "profile": "Perfil",
+    "language": "Idioma",
+    "theme": "Tema",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "themeToggle": {
+      "label": "Cambiar tema",
+      "items": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      }
+    },
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "userMenu": {
+      "label": "Mi cuenta"
+    },
+    "changeLanguage": "Cambiar idioma",
+    "copyright": "Todos los derechos reservados. Todos los productos, nombres de empresas y logotipos de terceros son marcas comerciales™ o marcas registradas® y pertenecen a sus respectivos propietarios."
+  },
+  "auth": {
+    "loginTitle": "Bienvenido de vuelta",
+    "loginDescription": "Inicia sesión en tu cuenta para continuar",
+    "registerTitle": "Crear una cuenta",
+    "registerDescription": "Únete a Synmet y comienza a rastrear tu productividad",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "rememberMe": "Recuérdame",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes cuenta? Regístrate",
+    "haveAccount": "¿Ya tienes cuenta? Inicia sesión",
+    "continueWithGithub": "Continuar con GitHub",
+    "invalidCredentials": "Credenciales inválidas",
+    "emailInUse": "Este correo ya está en uso"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcomeMessage": "Bienvenido, {name}",
+    "todayStats": "Estadísticas de hoy",
+    "totalCodingTime": "Tiempo de codificación total",
+    "projects": "Proyectos",
+    "recentActivity": "Actividad reciente",
+    "averageDailyTime": "Tiempo diario promedio",
+    "topLanguages": "Lenguajes principales",
+    "currentStreak": "Racha actual",
+    "noData": "No hay datos disponibles"
+  },
+  "landing": {
+    "navigation": {
+      "features": "Características",
+      "api": "API",
+      "documentation": "Documentación",
+      "testimonials": "Testimonios",
+      "support": "Soporte",
+      "privacyPolicy": "Política de privacidad",
+      "cookiePolicy": "Política de cookies",
+      "termsOfService": "Términos de servicio",
+      "disclaimer": "Aviso legal"
+    },
+    "heroTitle": "Rastreo de actividad de desarrollo con privacidad primero",
+    "heroSubtitle": "Monitorea tu productividad sin comprometer tus datos",
+    "heroDescription": "Synmet es una plataforma de código abierto, gestionada como SaaS y autohospedada para rastrear actividades de desarrollo con un fuerte enfoque en la privacidad y la propiedad de los datos.",
+    "cta": "Comenzar gratis",
+    "ctaSecondary": "Ver demostración",
+    "featuresTitle": "Características principales",
+    "featuresDescription": "Herramientas integrales para monitorear eficazmente sus métricas de desempeño como desarrollador de software.",
+    "featuresCollapsibleTrigger": "Tus métricas, tus datos",
+    "featuresCollapsibleDescription": "Creemos que sus métricas deben reflejar sus propios datos, no el producto de terceros. Le brindamos la posibilidad de recopilar y analizar sus datos de forma que le resulte comprensible.",
+    "feature1Title": "Rastreo de heartbeats",
+    "feature1Description": "Registro detallado de tu actividad de codificación en tiempo real.",
+    "feature2Title": "Análisis y métricas",
+    "feature2Description": "Visualiza tus patrones de productividad con gráficos intuitivos.",
+    "feature3Title": "Privacidad garantizada",
+    "feature3Description": "Tus datos nunca dejan tu servidor. 100% autohospedado.",
+    "footer": {
+      "section": {
+        "mainLinks": "Enlaces principales",
+        "socialMedia": "Redes sociales",
+        "securityAndPrivacy": "Seguridad y privacidad"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "Gestión de Claves API",
+    "description": "Gestiona las claves API para integrar Synmet con tus herramientas de desarrollo",
+    "howToUse": "Cómo usar las claves API",
+    "apiKeysDescription": "Las claves API te permiten autenticar tus plugins de editor y herramientas con Synmet. Mantén tus claves seguras y nunca las compartas.",
+    "keyPointsApi": {
+      "createApi": {
+        "title": "Crear clave API"
+      },
+      "copyApi": {
+        "title": "Copiar clave"
+      },
+      "useApi": {
+        "title": "Usar clave"
+      },
+      "monitorApi": {
+        "title": "Monitorear uso"
+      },
+      "revokeApi": {
+        "title": "Revocar claves"
+      }
+    },
+    "manageApiKeys": "Claves de API",
+    "yourApiKeys": "Tus claves API",
+    "createNewKey": "Crear nueva clave API",
+    "name": "Nombre",
+    "key": "Tienes {count, plural, =0 {0 claves} =1 {# clave} other {# claves}}",
+    "nameRequired": "El nombre es requerido",
+    "createError": "Error al crear la clave API",
+    "errorCreatingApiKey": "Error al crear la clave API",
+    "copyError": "Error al copiar",
+    "newApiKey": "Nueva clave API",
+    "apiKeyCreated": "Clave API creada",
+    "saveThisKeyInSafePlace": "Guarda esta clave en un lugar seguro. No podrás verla de nuevo.",
+    "yourApiKey": "Tu clave API",
+    "copied": "Copiado!",
+    "copy": "Copiar",
+    "nameKey": "Nombre: ",
+    "createdKey": "Creada: ",
+    "doneKey": "Hecho",
+    "storeKey": "Almacena esta clave de forma segura. No podrás verla de nuevo.",
+    "createKey": "Crear clave",
+    "generateNewApiKey": "Generar una nueva clave API para usar con el complemento de Synmet",
+    "keyName": "Nombre de la clave",
+    "keyNameDescription": "Un nombre amigable para identificar esta clave (ej. \"VS Code\", \"JetBrains\")",
+    "keyNamePlaceholder": "Mi clave de VS Code",
+    "expiresAt": "Fecha de expiración",
+    "expiresAtDescription": "Dejar vacío para claves que no expiran",
+    "cancel": "Cancelar",
+    "creating": "Creando...",
+    "created": "Creado",
+    "deleteError": "Error al eliminar la clave API",
+    "noApiKeys": "No hay claves API",
+    "createFirstKey": "Crea tu primera clave API para comenzar a rastrear tu actividad de desarrollo",
+    "createSuccess": "Clave API creada exitosamente",
+    "statusApi": {
+      "active": "Activo",
+      "revoked": "Revocada",
+      "expired": "Expirada"
+    },
+    "keyPreview": "Vista previa de la clave",
+    "copySuccess": "Copiado al portapapeles",
+    "copyKey": "Copiar clave",
+    "keyVisibleFor20Seconds": "Clave visible por 20 segundos",
+    "lastUsed": "Último uso",
+    "expires": "Expiración",
+    "deleting": "Eliminando...",
+    "confirmDelete": "Confirmar eliminación",
+    "delete": "Eliminar"
+  },
+  "sidebar": {
+    "navMain": {
+      "mainLabel": "Acceso rápido",
+      "coreFeatures": {
+        "label": "Espacio de Trabajo",
+        "items": {
+          "dashboard": "Panel",
+          "settings": "Configuración"
+        }
+      },
+      "documentation": {
+        "label": "Documentación"
+      },
+      "apiEndpoints": {
+        "label": "Rutas API"
+      }
+    }
+  }
+}

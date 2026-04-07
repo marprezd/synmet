@@ -1,0 +1,200 @@
+{
+  "breadcrumb": {
+    "home": "Home",
+    "signin": "Sign in",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "api-keys": "API Keys",
+    "projects": "Projects",
+    "profile": "Profile",
+    "account": "Account"
+  },
+  "common": {
+    "appName": "Synmet",
+    "tagline": "Metrics and productivity",
+    "footerDescription": "Synmet is an open-source, SaaS-managed, and self-hosted platform for tracking development activities.",
+    "appDescription": "Development activity tracking with privacy first",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Sign up",
+    "dashboard": "Dashboard",
+    "documentation": "Documentation",
+    "getStarted": "Get started",
+    "learnMore": "Learn more",
+    "settings": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "theme": "Theme",
+    "about": "About",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "themeToggle": {
+      "label": "Theme toggle",
+      "items": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      }
+    },
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "userMenu": {
+      "label": "My account"
+    },
+    "changeLanguage": "Change language",
+    "copyright": "All rights reserved. All third-party product, company names and logos are trademarks™ or registered® trademarks and remain the property of their respective holders."
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginDescription": "Sign in to your account to continue",
+    "registerTitle": "Create an account",
+    "registerDescription": "Join Synmet and start tracking your productivity",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "noAccount": "Don't have an account? Sign up",
+    "haveAccount": "Already have an account? Sign in",
+    "continueWithGithub": "Continue with GitHub",
+    "invalidCredentials": "Invalid credentials",
+    "emailInUse": "This email is already in use"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeMessage": "Welcome, {name}",
+    "todayStats": "Today's stats",
+    "totalCodingTime": "Total coding time",
+    "projects": "Projects",
+    "recentActivity": "Recent activity",
+    "averageDailyTime": "Average daily time",
+    "topLanguages": "Top languages",
+    "currentStreak": "Current streak",
+    "noData": "No data available"
+  },
+  "landing": {
+    "navigation": {
+      "features": "Features",
+      "api": "API",
+      "documentation": "Documentation",
+      "testimonials": "Testimonials",
+      "support": "Support",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "termsOfService": "Terms of Service",
+      "disclaimer": "Legal Disclaimer"
+    },
+    "heroTitle": "Development activity tracking with privacy first",
+    "heroSubtitle": "Monitor your productivity without compromising your data",
+    "heroDescription": "Synmet is an open-source, SaaS-managed, and self-hosted platform for tracking development activities with a strong focus on privacy and data ownership.",
+    "cta": "Get started",
+    "ctaSecondary": "View demo",
+    "featuresTitle": "Discover the key features",
+    "featuresDescription": "Comprehensive tools to effectively monitor your performance metrics as a software developer.",
+    "featuresCollapsibleTrigger": "Your metrics, your data",
+    "featuresCollapsibleDescription": "We believe that your metrics should reflect your own data, not someone else's product. We provide you with the ability to collect and analyse your data in a way that makes sense to you.",
+    "feature1Title": "Heartbeat tracking",
+    "feature1Description": "Detailed record of your coding activity in real-time.",
+    "feature2Title": "Analytics and metrics",
+    "feature2Description": "Visualize your productivity patterns with intuitive charts.",
+    "feature3Title": "Guaranteed privacy",
+    "feature3Description": "Your data never leaves your server. 100% self-hosted.",
+    "footer": {
+      "section": {
+        "mainLinks": "Main links",
+        "socialMedia": "Social media",
+        "securityAndPrivacy": "Security and Privacy"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "API Keys Management",
+    "description": "Manage API keys for integrating Synmet with your development tools",
+    "howToUse": "How to use API Keys",
+    "apiKeysDescription": "API keys allow you to authenticate your editor plugins and tools with Synmet. Keep your keys safe and never share them.",
+    "keyPointsApi": {
+      "createApi": {
+        "title": "Create API key"
+      },
+      "copyApi": {
+        "title": "Copy key"
+      },
+      "useApi": {
+        "title": "Use key"
+      },
+      "monitorApi": {
+        "title": "Monitor usage"
+      },
+      "revokeApi": {
+        "title": "Revoke keys"
+      }
+    },
+    "manageApiKeys": "API's Keys",
+    "yourApiKeys": "Your API Keys",
+    "createNewKey": "Create new API key",
+    "name": "Name",
+    "key": "You have {count, plural, =0 {no keys} =1 {# key} other {# keys}}",
+    "nameRequired": "Name is required",
+    "createError": "Failed to create API key",
+    "errorCreatingApiKey": "Error creating API key",
+    "copyError": "Failed to copy",
+    "newApiKey": "New API Key",
+    "apiKeyCreated": "API Key Created",
+    "saveThisKeyInSafePlace": "Save this key in a safe place. You won't be able to see it again.",
+    "yourApiKey": "Your API Key",
+    "copied": "Copied!",
+    "copy": "Copy",
+    "nameKey": "Name: ",
+    "createdKey": "Created: ",
+    "done": "Done",
+    "storeKey": "Store this key securely. It grants full access to your account's API.",
+    "createKey": "Create key",
+    "generateNewApiKey": "Generate a new API key for use with Synmet plugins",
+    "keyName": "Key Name",
+    "keyNameDescription": "A friendly name to identify this key (e.g., \"VS Code\", \"JetBrains\")",
+    "keyNamePlaceholder": "My VS Code Key",
+    "expiresAt": "Expires At",
+    "expiresAtDescription": "Leave empty for keys that don't expire",
+    "cancel": "Cancel",
+    "creating": "Creating...",
+    "created": "Created",
+    "deleteError": "Failed to delete API key",
+    "noApiKeys": "No API keys yet",
+    "createFirstKey": "Create your first API key to start tracking your development activity",
+    "createSuccess": "API key created successfully",
+    "statusApi": {
+      "active": "Active",
+      "revoked": "Revoked",
+      "expired": "Expired"
+    },
+    "keyPreview": "Key preview",
+    "copySuccess": "Copied to clipboard",
+    "copyKey": "Copy key",
+    "keyVisibleFor20Seconds": "Key visible for 20 seconds",
+    "lastUsed": "Last used",
+    "expires": "Expires",
+    "deleting": "Deleting...",
+    "confirmDelete": "Confirm Delete",
+    "delete": "Delete"
+  },
+  "sidebar": {
+    "navMain": {
+      "mainLabel": "Quick Access",
+      "coreFeatures": {
+        "label": "Workspace",
+        "items": {
+          "dashboard": "Dashboard",
+          "settings": "Settings"
+        }
+      },
+      "documentation": {
+        "label": "Documentation"
+      },
+      "apiEndpoints": {
+        "label": "Api Routes"
+      }
+    }
+  }
+}
