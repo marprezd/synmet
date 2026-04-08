@@ -34,7 +34,7 @@
   ],
   "observability": {
     "enabled": true
-  }
+  },
   /**
    * Smart Placement
    * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -53,4 +53,30 @@
    * https://developers.cloudflare.com/workers/configuration/secrets/
    */
   // "vars": {  "MY_VARIABLE": "production_value" }
+
+  // R2 incremental cache
+  // Replace the bucket_name below with the name of the R2 bucket you created in Cloudflare.
+  // Bucket names must be lowercase, alphanumeric/hyphen, and 3-63 characters long.
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "synmet-incremental-cache"
+    }
+  ],
+
+  // DO Queue
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "NEXT_CACHE_DO_QUEUE",
+        "class_name": "DOQueueHandler"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["DOQueueHandler"]
+    }
+  ]
 }
