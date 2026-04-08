@@ -1,4 +1,7 @@
 # eslint-disable pnpm/yaml-enforce-settings
+packages:
+  - '.'
+
 allowBuilds:
   '@parcel/watcher': true
   '@prisma/engines': true
