@@ -1,12 +1,8 @@
-import type { NextAuthOptions } from 'next-auth'
 import process from 'node:process'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import { getServerSession } from 'next-auth'
-import GithubProvider from 'next-auth/providers/github'
+import NextAuth from 'next-auth'
+import GitHub from 'next-auth/providers/github'
 import { routing } from '@/i18n/routing'
-import { prisma } from '@/lib/prisma'
 
-const prismaAdapter = PrismaAdapter(prisma)
 const localeRegex = /^\/([a-z]{2})/
 
 // Helper function to fetch user email from GitHub API
@@ -75,20 +71,21 @@ async function getGithubUserEmail(token: string) {
   }
 }
 
-export const authOptions: NextAuthOptions = {
-  adapter: {
-    ...prismaAdapter,
-    linkAccount: async (data: any) => {
-      // Filter fields not supported by the Prisma schema
-      const { refresh_token_expires_in, ...filteredData } = data as any
-      return prismaAdapter.linkAccount?.(filteredData)
-    },
-  },
+export const { auth, handlers, signIn, signOut } = NextAuth({
+  // adapter: {
+  //   ...prismaAdapter,
+  //   linkAccount: async (data: any) => {
+  //     // Filter fields not supported by the Prisma schema
+  //     const { refresh_token_expires_in, ...filteredData } = data as any
+  //     return prismaAdapter.linkAccount?.(filteredData)
+  //   },
+  // },
+  trustHost: true,
   session: {
     strategy: 'jwt',
   },
   providers: [
-    GithubProvider({
+    GitHub({
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
       allowDangerousEmailAccountLinking: true,
@@ -110,15 +107,15 @@ export const authOptions: NextAuthOptions = {
         if (githubEmail) {
           user.email = githubEmail
           // Update the user in the database with the email
-          try {
-            await prisma.user.update({
-              where: { id: user.id },
-              data: { email: githubEmail },
-            })
-          }
-          catch (error) {
-            console.error('Failed to update user email in database:', error)
-          }
+          // try {
+          //   await prisma.user.update({
+          //     where: { id: user.id },
+          //     data: { email: githubEmail },
+          //   })
+          // }
+          // catch (error) {
+          //   console.error('Failed to update user email in database:', error)
+          // }
         }
       }
       return true
@@ -150,19 +147,17 @@ export const authOptions: NextAuthOptions = {
       // Default redirect to workspace
       return `${baseUrl}/${routing.defaultLocale}/dashboard`
     },
-    // eslint-disable-next-line unused-imports/no-unused-vars
-    jwt: async ({ token, user, account }) => {
+
+    jwt: ({ token, user }) => {
       if (user) {
         token.sub = user.id
         token.email = user.email
       }
       return token
     },
-    session: async ({ session, token }) => {
+    session: ({ session, token }) => {
       if (session?.user && token?.sub) {
-        // @ts-expect-error - Adding user ID to session for client-side access
         session.user.id = token.sub
-        // Ensure email is always available in the session
         session.user.email = token.email || session.user.email
       }
       return session
@@ -172,11 +167,4 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/signin',
     error: '/auth/error',
   },
-}
-
-export async function auth() {
-  // console.warn('auth() called')
-  const session = await getServerSession(authOptions)
-  // console.warn('auth() result:', session)
-  return session
-}
+})

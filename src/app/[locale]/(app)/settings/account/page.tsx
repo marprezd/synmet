@@ -2,18 +2,27 @@
 
 import { useSession } from 'next-auth/react'
 import { useTranslations } from 'next-intl'
-import { redirect } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function AccountPage() {
+  // eslint-disable-next-line unused-imports/no-unused-vars
   const { data: session, status } = useSession()
   const t = useTranslations('breadcrumb')
+  const router = useRouter()
+  const params = useParams()
+  const locale = (params?.locale as string) ?? 'en'
 
-  if (status === 'loading') {
-    return <div>Loading...</div>
-  }
+  useEffect(() => {
+    // Redirect immediately if unauthenticated, don't render anything
+    if (status === 'unauthenticated') {
+      router.push(`/${locale}/auth/signin`)
+    }
+  }, [locale, router, status])
 
-  if (!session) {
-    redirect('/auth/signin')
+  // Only render content if authenticated
+  if (status !== 'authenticated') {
+    return <div />
   }
 
   return (

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import { redirect } from 'next/navigation'
 import { ApiKeysContainer } from '@/components/api-keys/api-keys-container'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
@@ -11,6 +12,10 @@ export const metadata = {
 export default async function IntegrationsPage() {
   const session = await auth()
   const t = await getTranslations('apiKeys')
+
+  if (!session?.user || !(session.user as any).id) {
+    redirect('/auth/signin')
+  }
 
   const apiKeys = await prisma.apiKey.findMany({
     where: { userId: (session.user as any).id },
