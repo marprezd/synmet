@@ -1,10 +1,16 @@
-import { getTranslations } from 'next-intl/server'
-import { redirect } from 'next/navigation'
-import { auth } from '@/lib/auth'
+'use client'
 
-export default async function WorkspacePage() {
-  const session = await auth()
-  const t = await getTranslations('dashboard')
+import { useSession } from 'next-auth/react'
+import { useTranslations } from 'next-intl'
+import { redirect } from 'next/navigation'
+
+export default function WorkspacePage() {
+  const { data: session, status } = useSession()
+  const t = useTranslations('dashboard')
+
+  if (status === 'loading') {
+    return <div>Loading...</div>
+  }
 
   if (!session) {
     redirect('/auth/signin')

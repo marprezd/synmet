@@ -84,6 +84,9 @@ export const authOptions: NextAuthOptions = {
       return prismaAdapter.linkAccount?.(filteredData)
     },
   },
+  session: {
+    strategy: 'jwt',
+  },
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -147,12 +150,20 @@ export const authOptions: NextAuthOptions = {
       // Default redirect to workspace
       return `${baseUrl}/${routing.defaultLocale}/dashboard`
     },
-    session: async ({ session, user }) => {
-      if (session?.user) {
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    jwt: async ({ token, user, account }) => {
+      if (user) {
+        token.sub = user.id
+        token.email = user.email
+      }
+      return token
+    },
+    session: async ({ session, token }) => {
+      if (session?.user && token?.sub) {
         // @ts-expect-error - Adding user ID to session for client-side access
-        session.user.id = user.id
+        session.user.id = token.sub
         // Ensure email is always available in the session
-        session.user.email = user.email || session.user.email
+        session.user.email = token.email || session.user.email
       }
       return session
     },
