@@ -4,6 +4,7 @@ import {
   ChevronsUpDown,
   LogOut,
 } from 'lucide-react'
+import { signOut } from 'next-auth/react'
 import { useTranslations } from 'next-intl'
 import {
   DropdownMenu,
@@ -61,7 +62,7 @@ export function TheSidebarFooter({
               </DropdownMenuLabel>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => signOut()}>
               <LogOut className="size-4" />
               <span className="text-sm">{t('signOut')}</span>
             </DropdownMenuItem>
