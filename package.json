@@ -1,6 +1,6 @@
 {
   "name": "synmet",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,8 @@
     "generate": "dotenv -e .dev.vars -- npx prisma generate --watch",
     "studio": "dotenv -e .dev.vars -- npx prisma studio",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "test": "jest"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
@@ -46,6 +47,9 @@
     "@prisma/adapter-pg": "^7.5.0",
     "@prisma/client": "^7.5.0",
     "@tailwindcss/postcss": "^4.2.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -57,8 +61,11 @@
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
     "prisma": "^7.5.0",
     "tailwindcss": "^4.2.2",
+    "ts-jest": "^29.4.9",
     "typescript": "^5.9.3",
     "wrangler": "^4.76.0"
   }
